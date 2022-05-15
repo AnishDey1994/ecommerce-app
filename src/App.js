@@ -1,11 +1,10 @@
-import './App.css';
+import "./App.css";
+import PreLoginView from "./widgets/preLoginView/preLoginView";
 
 function App() {
   return (
     <div className="App">
-      <div className="mainWrapper">
-        <div>E-commerce app</div>
-      </div>
+      <PreLoginView />
     </div>
   );
 }

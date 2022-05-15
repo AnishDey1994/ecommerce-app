@@ -3,9 +3,12 @@ import './UXHeader.css';
 
 const UXHeader = (props) => {
     return (
-        <div className={props.variant && props.variant}>
-            {props.text && props.text}
-        </div>
-    )
+      <div
+        id={props.id && props.id}
+        className={props.className && props.className}
+      >
+        {props.text && props.text}
+      </div>
+    );
 }
 export default UXHeader;
