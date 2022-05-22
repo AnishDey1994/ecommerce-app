@@ -8,5 +8,9 @@
   padding: 0;
   color: black;
 }
-.mainWrapper{
+.leftBorder{
+  border-left: 1px lightgray solid;
+}
+.rightBorder{
+  border-right: 1px lightgray solid;
 }
