@@ -1,17 +1,36 @@
-import UXHeader from '../../components/UXHeader/UXHeader';
-import UXTextbox from '../../components/UXTextbox/UXTextbox';
-import UXButton from '../../components/UXButton/UXButton';
-import './loginView.css';
-import { useState } from 'react';
+import UXHeader from "../../components/UXHeader/UXHeader";
+import UXTextbox from "../../components/UXTextbox/UXTextbox";
+import UXButton from "../../components/UXButton/UXButton";
+import "./loginView.css";
+import { useState } from "react";
 
 const LoginView = () => {
   const [userName, setUserName] = useState(null);
   const [password, setPassword] = useState(null);
-  
-  const handleLogin = () =>{
-      console.log('Logged In.....');
-  }
-  
+  const [errors, setErrors] = useState(null);
+
+  const handleSubmit = () => {
+    let validForm = validation();
+    console.log(validForm);
+    if (validForm.userName || validForm.password) {
+      setErrors(validForm);
+    } else {
+      console.log("Logged in");
+    }
+    console.log("**", errors);
+  };
+
+  const validation = () => {
+    let errors = {};
+    if (!userName) {
+      errors.userName = "Email/username is required";
+    }
+    if (!password) {
+      errors.password = "Password is required";
+    }
+    return errors;
+  };
+
   return (
     <div className="loginWrapper">
       <div className="loginItems">
@@ -27,6 +46,7 @@ const LoginView = () => {
           onEdit={(val) => setUserName(val)}
         />
       </div>
+      <p>{errors && errors.userName}</p>
       <div className="loginItems">
         <UXTextbox
           id="loginPassword"
@@ -37,12 +57,13 @@ const LoginView = () => {
           onEdit={(val) => setPassword(val)}
         />
       </div>
+      <p>{errors && errors.password}</p>
       <div className="loginItems">
         <UXButton
           id="loginSubmitBtn"
           variant="primary"
           text="Submit"
-          onTap={() => handleLogin()}
+          onTap={() => handleSubmit()}
         />
       </div>
     </div>
