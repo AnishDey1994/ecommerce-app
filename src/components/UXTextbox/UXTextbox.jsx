@@ -1,5 +1,5 @@
-import React from "react";
-import "./UXTextbox.css";
+import React from 'react';
+import './UXTextbox.css';
 
 const UXTextbox = (props) => {
   return (
