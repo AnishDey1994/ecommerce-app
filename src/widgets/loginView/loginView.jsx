@@ -46,7 +46,7 @@ const LoginView = () => {
           onEdit={(val) => setUserName(val)}
         />
       </div>
-      <p>{errors && errors.userName}</p>
+      <p className="errMsg">{errors && errors.userName}</p>
       <div className="loginItems">
         <UXTextbox
           id="loginPassword"
@@ -57,7 +57,7 @@ const LoginView = () => {
           onEdit={(val) => setPassword(val)}
         />
       </div>
-      <p>{errors && errors.password}</p>
+      <p className="errMsg">{errors && errors.password}</p>
       <div className="loginItems">
         <UXButton
           id="loginSubmitBtn"
