@@ -1,0 +1,11 @@
+.danger{
+    text-align: left;
+    font-size: 10px;
+    padding: 5px;
+    color: red;
+}
+.success{
+    font-size: 10px;
+    padding: 5px;
+    color: green;
+}
