@@ -8,6 +8,16 @@
   padding: 0;
   color: black;
 }
+.Reg {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
 .leftBorder{
   border-left: 1px lightgray solid;
 }

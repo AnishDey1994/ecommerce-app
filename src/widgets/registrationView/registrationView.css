@@ -1,0 +1,39 @@
+.registrationPageWrapper {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 30px 15px 30px;
+    padding: 15px;
+    border: 1px lightgray solid;
+    box-shadow: 10px 10px 5px grey;
+  }
+  .registrationTextBox{
+    width:100%;
+    border:none;
+    border-bottom:2px solid silver;
+  }
+  input:focus, input:focus{
+    outline: none;
+  }
+  .registrationItems {
+    flex: 1;
+  }
+  .loginLink{
+    margin-top: 10px;
+    font-size: 12px;
+  }
+  .loginLink u {
+    color: rgba(50, 162, 232, 0.922);
+    cursor: pointer;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .registrationPageWrapper {
+      border: none;
+      box-shadow: none;
+    }
+  }
+  
