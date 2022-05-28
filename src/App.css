@@ -8,9 +8,17 @@
   padding: 0;
   color: black;
 }
-.leftBorder{
+.leftBorder {
   border-left: 1px lightgray solid;
 }
-.rightBorder{
+.rightBorder {
   border-right: 1px lightgray solid;
+}
+.urlLink {
+  margin-top: 10px;
+  font-size: 12px;
+}
+.urlLink u {
+  color: rgba(50, 162, 232, 0.922);
+  cursor: pointer;
 }

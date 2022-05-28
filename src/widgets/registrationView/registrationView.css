@@ -1,0 +1,24 @@
+.registrationPageWrapper {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 30px 15px 30px;
+    padding: 15px;
+    border: 1px lightgray solid;
+    box-shadow: 10px 10px 5px grey;
+  }
+  .registrationItems {
+    flex: 1;
+  }
+  
+  
+  @media only screen and (max-width: 600px) {
+    .registrationPageWrapper {
+      border: none;
+      box-shadow: none;
+    }
+  }
+  

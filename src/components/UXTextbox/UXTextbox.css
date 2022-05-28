@@ -1,3 +1,12 @@
-.textbox{
-    border:none;
+.underLineTextBox{
+  width:100%;
+  border:none;
+  border-bottom:2px solid silver;
+}
+.underLineTextBox:focus{
+    outline: none;
+    border-bottom:2px solid #4158d0;
+}
+.textBoxError:focus{
+    border-bottom:2px solid red;
 }
