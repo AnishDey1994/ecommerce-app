@@ -1,12 +1,17 @@
-import "./App.css";
 import PreLoginView from "./widgets/preLoginView/preLoginView";
 import LandingPage from './widgets/landingView/landingPage';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import "./App.css";
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <PreLoginView />
-      <LandingPage/>
+      <Router>
+        <Routes>
+          <Route exact path='/' element={<PreLoginView />} />
+          <Route exact path='/landingPage' element={<LandingPage />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

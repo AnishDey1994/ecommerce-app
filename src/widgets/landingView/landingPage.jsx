@@ -10,14 +10,14 @@ const LandingPage = () => {
   const getProduct = () => {
     setLoader(true);
     axios
-      .get("https://fakestoreapi.com/products1")
+      .get("https://fakestoreapi.com/products")
       .then((res) => {
         setProducts(res.data);
         setLoader(false);
       })
       .catch((err) => {
         setError(err.message);
-        setLoader(true);
+        setLoader(false);
       });
   };
   useEffect(() => {
