@@ -26,7 +26,13 @@ const LandingPage = () => {
   return (
   <div className="landingPage">
       {
-          isLoader? <div></div>:null
+          isLoader ? <div>Loading...</div> 
+          : products && products.length > 0 ? 
+            products.map((product, index) => (
+              <div key={index} id={'products' + index}>{product.title}</div> 
+            ))
+            : error ? <div>{error}</div>
+            : <div>Opps!! something went wrong</div>
       }
   </div>
   );
